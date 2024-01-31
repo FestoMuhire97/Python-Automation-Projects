@@ -1,1 +1,2 @@
 # Python-Automation-Projects
+This repository contains personal projects (mostly in python) that I create to automate tasks typically carried out manually by our Instrumentation team. It helps me learn and refine my python skills, and these projects contribute to the team's productivity by enhancing time efficiency and enabling hands-free execution of certain tasks.
