@@ -5,10 +5,13 @@ import glob
 import csv
 
 def generate_instrument_metrics():
-    if not os.path.isdir('C:/Users/Festo Muhire/Documents/Instrument Metrics'):
-        metrics_folder_path = os.mkdir('C:/Users/Festo Muhire/Documents/Instrument Metrics')
+    if not os.path.isdir('C:/Program Files (x86)/HAMILTON/Instrument Metrics'):
+    #if not os.path.isdir('C:/Users/Festo Muhire/Documents/Instrument Metrics'):
+        #metrics_folder_path = os.mkdir('C:/Users/Festo Muhire/Documents/Instrument Metrics')
+        metrics_folder_path = os.mkdir('C:/Program Files (x86)/HAMILTON/Instrument Metrics')
     
-    metrics_folder_path = 'C:/Users/Festo Muhire/Documents/Instrument Metrics'
+    #metrics_folder_path = 'C:/Users/Festo Muhire/Documents/Instrument Metrics'
+    metrics_folder_path = os.mkdir('C:/Program Files (x86)/HAMILTON/Instrument Metrics')
     if not os.path.isfile(metrics_folder_path + '/' + 'Instrument Metrics Analysis' + '.csv'):
         with open (metrics_folder_path + '/' + 'Instrument Metrics Analysis' + '.csv', 'w', newline = '') as file_method:
             writer = csv.writer(file_method)
@@ -17,13 +20,17 @@ generate_instrument_metrics()
 
 # function to append Method name to the .csv file:
 def append_csv_file(method_name):
-    with open ('C:/Users/Festo Muhire/Documents/Instrument Metrics' + '/' + 'Instrument Metrics Analysis' + '.csv', 'a', newline = '') as file_method:
+    csv_file = 'C:/Program Files (x86)/HAMILTON/Instrument Metrics'+ '/' + 'Instrument Metrics Analysis' + '.csv'
+    with open (csv_file, 'a', newline = '') as file_method:
+    #with open ('C:/Users/Festo Muhire/Documents/Instrument Metrics' + '/' + 'Instrument Metrics Analysis' + '.csv', 'a', newline = '') as file_method:
                 writer = csv.writer(file_method)
                 writer.writerow(method_name)
 
 def generate_date_month_folders():
-    if not os.path.isdir('C:/Users/Festo Muhire/Documents/Hamilton Error Logs'):
-            folder_path = os.mkdir('C:/Users/Festo Muhire/Documents/Hamilton Error Logs')
+    if not os.path.isdir('C:/Program Files (x86)/HAMILTON/Hamilton Error Logs'):
+    #if not os.path.isdir('C:/Users/Festo Muhire/Documents/Hamilton Error Logs'):
+        #folder_path = os.mkdir('C:/Users/Festo Muhire/Documents/Hamilton Error Logs')
+        folder_path = os.mkdir('C:/Program Files (x86)/HAMILTON/Hamilton Error Logs')
 generate_date_month_folders()
 
 def get_creation_month_year(tracefile_path):
@@ -72,7 +79,8 @@ def move_tracefiles_to_folders(base_path, destination_folder):
 #base_path = 'C:/Users/Festo Muhire/Desktop/LogFiles'
 base_path = 'C:/Program Files (x86)/HAMILTON/LogFiles'
 #base_path = 'C:/Users/Festo Muhire/Desktop/Vantage3 Log files'
-destination_folder= 'C:/Users/Festo Muhire/Documents/Hamilton Error Logs'
+#destination_folder= 'C:/Users/Festo Muhire/Documents/Hamilton Error Logs'
+destination_folder= 'C:/Program Files (x86)/HAMILTON/Hamilton Error Logs'
 
 #Trace_folder = glob.glob(destination_path)+ '/*')
 
