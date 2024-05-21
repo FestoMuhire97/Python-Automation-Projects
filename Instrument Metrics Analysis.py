@@ -11,7 +11,7 @@ def generate_instrument_metrics():
         metrics_folder_path = os.mkdir('C:/Program Files (x86)/HAMILTON/Instrument Metrics')
     
     #metrics_folder_path = 'C:/Users/Festo Muhire/Documents/Instrument Metrics'
-    metrics_folder_path = os.mkdir('C:/Program Files (x86)/HAMILTON/Instrument Metrics')
+    metrics_folder_path = 'C:/Program Files (x86)/HAMILTON/Instrument Metrics'
     if not os.path.isfile(metrics_folder_path + '/' + 'Instrument Metrics Analysis' + '.csv'):
         with open (metrics_folder_path + '/' + 'Instrument Metrics Analysis' + '.csv', 'w', newline = '') as file_method:
             writer = csv.writer(file_method)
